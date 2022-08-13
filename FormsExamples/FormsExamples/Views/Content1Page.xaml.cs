@@ -15,7 +15,9 @@ namespace FormsExamples.Views
 
 		protected void ButtonClicked(object sender, EventArgs e) {
 
-			((Button)sender).Text = "It is so!";
+			((Button)sender).Text = myEntry.Text;
+			myBoxView.Color = Color.Yellow;
+			
 		}
 
 		async protected void ImageTapped(object sender, EventArgs e) {
@@ -23,8 +25,14 @@ namespace FormsExamples.Views
 			Image image = ((Image)sender);
 
 			image.Opacity = .5;
-			await Task.Delay(200);
+			await Task.Delay(5000);
 			image.Opacity = 1;
+			myButton.Text = "Imaged Tapped";
 		}
-	}
+
+        private void myEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+			myButton.Text = myEntry.Text;
+        }
+    }
 }

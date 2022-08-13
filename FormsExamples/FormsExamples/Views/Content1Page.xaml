@@ -23,10 +23,10 @@ displaying one or more
 lines of text.
 					</Label.Text>
 				</Label>
-				<Button Text = "Make It So" FontSize ="Large" HorizontalOptions="Center" VerticalOptions="Fill" Clicked="ButtonClicked" />
-				<Entry Placeholder="Username" VerticalOptions="Center" Keyboard="Text" />
-				<BoxView Color="SkyBlue" WidthRequest="150" HeightRequest="150" HorizontalOptions="StartAndExpand" VerticalOptions="Fill" />
-				<Image Source="monkey.png" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Fill" >
+				<Button x:Name="myButton" Text = "Make It So" FontSize ="Large" HorizontalOptions="Center" VerticalOptions="Fill" Clicked="ButtonClicked" />
+				<Entry TextChanged="myEntry_TextChanged" x:Name="myEntry" Placeholder="Username" VerticalOptions="Center" Keyboard="Text" />
+				<BoxView x:Name="myBoxView" Color="SkyBlue" WidthRequest="150" HeightRequest="150" HorizontalOptions="StartAndExpand" VerticalOptions="Fill" />
+                <Image Source="monkey.png" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Fill" >
 					<Image.GestureRecognizers>
         				<TapGestureRecognizer Tapped="ImageTapped"/>
     				</Image.GestureRecognizers>
